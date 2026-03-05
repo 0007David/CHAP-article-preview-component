@@ -69,7 +69,7 @@ body {
 .card-content {
     width: 80%;
     margin: 0 auto;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 
 .card-content>p {
@@ -90,9 +90,8 @@ card-footer-> background: var(--clr-VeryDarkGrayishBlue);
 .card-footer {
     width: 100%;
     /* background: var(--clr-VeryDarkGrayishBlue); */
-
-    padding: 2em 0;
-    color: white;
+    padding: 1.5em 0;
+    color: red;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -105,6 +104,26 @@ card-footer-> background: var(--clr-VeryDarkGrayishBlue);
 
     justify-content: space-between;
     gap: 1.5em;
+}
+
+#footer-content {
+    display: flex;
+    gap: 1em;
+    /* border: 2px solid lightgreen; */
+}
+
+#footer-active {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    /* gap: 1.5em; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+#footer-active>span {
+    color: var(--clr-GrayishBlue);
+    word-spacing: .4em;
 }
 
 .active {
@@ -131,20 +150,57 @@ card-footer-> background: var(--clr-VeryDarkGrayishBlue);
 
 .btn {
     border: none;
+
 }
 
 .btn-icon {
-    background-color: var(--clr-LightGrayishBlue);
-
+    /* background: var(--clr-LightGrayishBlue); */
+    color: white;
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    /* margin-left: 2.5em; */
+    width: 30px;
+    height: 30px;
     margin-left: auto;
+    /* mask: url("./images/icon-share.svg") no-repeat center; */
+    /* -webkit-mask: url("./images/icon-share.svg") no-repeat center; */
 }
+
 
 .icon-share {
     /* width: 100%; */
+    /* filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%); */
+}
+
+.icon-face {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    mask: url("./images/icon-facebook.svg") no-repeat center;
+    -webkit-mask: url("./images/icon-facebook.svg") no-repeat center;
+}
+
+.icon-twitter {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    mask: url("./images/icon-twitter.svg") no-repeat center;
+    -webkit-mask: url("./images/icon-twitter.svg") no-repeat center;
+}
+
+.icon-pinterest {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    mask: url("./images/icon-pinterest.svg") no-repeat center;
+    -webkit-mask: url("./images/icon-pinterest.svg") no-repeat center;
+}
+
+.icon-share {
+    width: 35px;
+    height: 35px;
+    background: var(--clr-DesaturatedDarkBlue);
+    color: white;
+    mask: url("./images/icon-share.svg") no-repeat center;
+    -webkit-mask: url("./images/icon-share.svg") no-repeat center;
 }
 
 
