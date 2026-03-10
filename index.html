@@ -22,43 +22,46 @@
   <main class="container">
     <article class="card">
       <img class="card-image" src="./images/drawers.jpg" alt="">
-      <header class="card-header">
-        <h2>Shift the overall look and feel by adding these wonderful
-          touches to furniture in your home</h2>
-      </header>
+      <div class="wrapper">
+        <header class="card-header">
+          <h2>Shift the overall look and feel by adding these wonderful
+            touches to furniture in your home</h2>
+        </header>
 
-      <div class="card-content">
-        <p>Ever been in a room and felt like something was missing? Perhaps
-          it felt slightly bare and uninviting. I’ve got some simple tips
-          to help you make any room feel complete.</p>
-      </div>
-
-      <footer id="card-footer" class="card-footer">
-        <div class="card-footer-content">
-
-          <div id="footer-content">
-            <img class="img-avatar" src="./images/avatar-michelle.jpg" alt="">
-            <p class="name-avatar">Michelle Appleton <span>28 Jun 2020</span></p>
-          </div>
-          <div id="footer-active" style="display: none;">
-            <span>S H A R E</span>
-            <button class="btn icon-face" type="button">
-            </button>
-            <button class="btn icon-twitter" type="button">
-            </button>
-
-            <button class="btn icon-pinterest" type="button">
-            </button>
-          </div>
-
-
-
-          <button id="btn-share" class="btn btn-icon" type="button">
-            <img src="./images/icon-share.svg" alt="">
-          </button>
+        <div class="card-content">
+          <p>Ever been in a room and felt like something was missing? Perhaps
+            it felt slightly bare and uninviting. I’ve got some simple tips
+            to help you make any room feel complete.</p>
         </div>
 
-      </footer>
+        <footer id="card-footer" class="card-footer">
+          <div class="card-footer-content">
+
+            <div id="footer-content">
+              <img class="img-avatar" src="./images/avatar-michelle.jpg" alt="">
+              <p class="name-avatar">Michelle Appleton <span>28 Jun 2020</span></p>
+            </div>
+
+            <div id="footer-active" style="display: none;">
+              <span>S H A R E</span>
+              <button class="btn icon-face" type="button">
+              </button>
+              <button class="btn icon-twitter" type="button">
+              </button>
+              <button class="btn icon-pinterest" type="button">
+              </button>
+            </div>
+
+            <button id="btn-share" popovertarget="tooltipLink" class="btn btn-icon" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 15 15">
+                <path xmlns="http://www.w3.org/2000/svg" fill="#F1F6FB"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+              </svg>
+            </button>
+          </div>
+
+        </footer>
+      </div>
 
     </article>
 
@@ -70,5 +73,16 @@
   </div> -->
   <script src="./script.js"></script>
 </body>
+<dialog anchor="btn-share" id="tooltipLink" popover class="toogletip">
+  <div id="footer-active-popover" class="footer-active">
+    <span>S H A R E</span>
+    <button class="btn icon-face" type="button">
+    </button>
+    <button class="btn icon-twitter" type="button">
+    </button>
+    <button class="btn icon-pinterest" type="button">
+    </button>
+  </div>
+</dialog>
 
 </html>
