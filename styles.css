@@ -79,17 +79,8 @@ body {
     font-weight: 500;
 }
 
-/*
-Active 
-poner display: none
-comentar 
-card-footer-> background: var(--clr-VeryDarkGrayishBlue);
-*/
-
-
 .card-footer {
     width: 100%;
-    /* background: var(--clr-VeryDarkGrayishBlue); */
     padding: 1.5em 0;
     color: red;
     border-bottom-left-radius: 10px;
@@ -109,14 +100,12 @@ card-footer-> background: var(--clr-VeryDarkGrayishBlue);
 #footer-content {
     display: flex;
     gap: 1em;
-    /* border: 2px solid lightgreen; */
 }
 
 #footer-active {
     width: 80%;
     display: flex;
     margin: 0 auto;
-    /* gap: 1.5em; */
     align-items: center;
     justify-content: space-around;
 }
@@ -149,7 +138,6 @@ card-footer-> background: var(--clr-VeryDarkGrayishBlue);
 .name-avatar {
     color: var(--clr-VeryDarkGrayishBlue);
     font-weight: 700;
-    /* margin-left: 1.5em; */
 }
 
 .name-avatar>span {
@@ -165,38 +153,19 @@ card-footer-> background: var(--clr-VeryDarkGrayishBlue);
 }
 
 .btn-icon {
-    /* active */
-    background-color: var(--clr-DesaturatedDarkBlue);
-    /* background-color: var(--clr-LightGrayishBlue); */
+    background-color: var(--clr-LightGrayishBlue);
     border-radius: 50%;
     width: 38px;
     height: 38px;
     margin-left: auto;
-    /* mask: url("./images/icon-share.svg") no-repeat center; */
-    /* -webkit-mask: url("./images/icon-share.svg") no-repeat center; */
-    /* -webkit-mask-size: contain; */
-    /* mask-size: contain; */
 }
 
-svg {
-    /* size: 1000px; */
-    /* background-color: red; */
-    /* Color de fondo */
-    /* width: 40px; */
-    /* height: 40px; */
+.no-active {
+    fill: var(--clr-DesaturatedDarkBlue);
 }
 
-svg path {
-    /* active */
+.active {
     fill: var(--clr-LightGrayishBlue);
-    /* fill: var(--clr-DesaturatedDarkBlue); */
-    /* Cambiar color de relleno del SVG */
-}
-
-
-.icon-share {
-    /* width: 100%; */
-    /* filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%); */
 }
 
 .icon-face {
@@ -233,9 +202,6 @@ svg path {
 }
 
 @media (min-width: 760px) {
-    body {
-        /* background: red; */
-    }
 
     .container {
         width: 100%;
@@ -244,19 +210,18 @@ svg path {
 
     .card {
         display: flex;
-        /* background: white; */
-        border-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
 
     }
 
     .card-image {
         width: 40%;
         object-fit: cover;
-        /* flex-basis: auto; */
-        /* height: 299px; */
         height: auto;
-        /* height: 320px; */
         border-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
         margin-bottom: 0;
     }
 
@@ -289,9 +254,10 @@ svg path {
     margin: 0;
     position: fixed;
     /* No longer needed
-  position-anchor: --trigger;
-  */
-    top: calc(anchor(top) - 80px);
+      position-anchor: --trigger;
+    */
+    top: anchor(top);
+    translate: 0 calc(-100% - 20px);
     justify-self: anchor-center;
 }
 
@@ -302,21 +268,24 @@ svg path {
     background: var(--clr-VeryDarkGrayishBlue);
     color: white;
     position: relative;
+
+    overflow: visible;
 }
 
 .toogletip::before {
     content: "";
     position: absolute;
 
-    top: -8px;
-    left: 20px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 
     width: 0;
     height: 0;
 
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid #222;
+    border-top: 8px solid var(--clr-VeryDarkGrayishBlue);
 }
 
 
